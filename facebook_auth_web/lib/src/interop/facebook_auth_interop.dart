@@ -42,8 +42,12 @@ extension type LoginOptions._(JSObject _) implements JSObject {
     required String scope,
     // ignore: non_constant_identifier_names
     required bool return_scopes,
+    // ignore: non_constant_identifier_names
+    String? appId,
   });
   external String get scope;
   // ignore: non_constant_identifier_names
   external bool get return_scopes;
+  // ignore: non_constant_identifier_names
+  external String get appId;
 }

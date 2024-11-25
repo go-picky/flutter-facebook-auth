@@ -1,17 +1,19 @@
 import 'dart:convert';
-import 'package:flutter/services.dart';
+
 import 'package:flutter/foundation.dart'
     show visibleForTesting, defaultTargetPlatform, TargetPlatform;
+import 'package:flutter/services.dart';
 
-import 'facebook_auth_plaftorm.dart';
-import 'login_result.dart';
 import 'access_token.dart';
+import 'facebook_auth_plaftorm.dart';
 import 'login_behavior.dart';
+import 'login_result.dart';
 
 /// class to make calls to the facebook login SDK
 class FacebookAuthPlatformImplementation extends FacebookAuthPlatform {
   /// check if is running on Android
   bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
+
   bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 
   @visibleForTesting
@@ -24,11 +26,14 @@ class FacebookAuthPlatformImplementation extends FacebookAuthPlatform {
   ///
   /// [loginBehavior] (only Android) use this param to set the UI for the authentication,
   /// like webview, native app, or a dialog.
+  ///
+  /// [appId] the application id for the facebook application
   @override
   Future<LoginResult> login({
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.dialogOnly,
     LoginTracking loginTracking = LoginTracking.enabled,
+    String? appId,
     String? nonce,
   }) async {
     try {
@@ -37,6 +42,7 @@ class FacebookAuthPlatformImplementation extends FacebookAuthPlatform {
         "loginBehavior": getLoginBehaviorAsString(loginBehavior),
         "tracking": loginTracking.name,
         "nonce": nonce,
+        'appId': appId,
       });
       final map = Map<String, dynamic>.from(result);
 
