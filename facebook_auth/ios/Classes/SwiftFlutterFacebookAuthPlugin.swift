@@ -15,6 +15,12 @@ public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {
     }
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        if call.method == "login" {
+            if let args = call.arguments as? [String: Any],
+                let appId = args["appId"] as? String {
+                    setAppId(appId)
+            }
+        }
         self.facebookAuth.handle(call, result: result)
     }
 

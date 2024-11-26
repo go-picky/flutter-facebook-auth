@@ -40,12 +40,14 @@ class FacebookAuth: NSObject {
             let permissions = args?["permissions"] as! [String]
             let tracking = args?["tracking"] as! String
             let customNonce = args?["nonce"] as? String
-            
+            let appId = args?["appId"] as? String
+
             login(
                 permissions: permissions,
                 flutterResult: result,
                 tracking: tracking == "limited" ? .limited : .enabled,
-                nonce: customNonce
+                nonce: customNonce,
+                appId: appId
             )
             
         case "getAccessToken":
@@ -96,8 +98,13 @@ class FacebookAuth: NSObject {
         permissions: [String],
         flutterResult: @escaping FlutterResult,
         tracking: LoginTracking,
+        appId: String?,
         nonce: String?
     ) {
+        if let appId = appId {
+            setAppId(appId)
+        }
+
         let isOK = setPendingResult(methodName: "login", flutterResult: flutterResult)
         if !isOK {
             return
@@ -144,6 +151,10 @@ class FacebookAuth: NSObject {
                 
             }
         )
+
+        if appId != nil {
+            resetApplicationId()
+        }
     }
     
     /**
@@ -240,4 +251,20 @@ class FacebookAuth: NSObject {
     private func isLimitedLogin() -> Bool {
         return UserDefaults.standard.bool(forKey: "facebook_limited_login")
     }
+
+    private func setAppId(_ appId: String) {
+        Settings.shared.appID = appId
+    }
+
+    private func resetApplicationId() {
+        if let bundleId = Bundle.main.bundleIdentifier,
+           let appId = Bundle.main.object(forInfoDictionaryKey: "FacebookAppID") as? String {
+            if appId.lowercased().hasPrefix("fb") {
+                Settings.shared.appID = String(appId.dropFirst(2))
+            } else {
+                Settings.shared.appID = appId
+            }
+        }
+    }
+
 }
