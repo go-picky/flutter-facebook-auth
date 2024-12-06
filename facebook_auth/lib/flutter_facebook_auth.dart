@@ -81,17 +81,21 @@ class FacebookAuth {
   /// [loginBehavior] (only Android) use this param to set the UI for the authentication,
   /// like webview, native app, or a dialog.
   ///
+  /// [appId] application id for the facebook application
+  ///
   /// [nonce] a custom nonce
   Future<LoginResult> login({
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.nativeWithFallback,
     LoginTracking loginTracking = LoginTracking.limited,
+    String? appId,
     String? nonce,
   }) =>
       _authPlatform.login(
         permissions: permissions,
         loginBehavior: loginBehavior,
         loginTracking: loginTracking,
+        appId: appId,
         nonce: nonce,
       );
 

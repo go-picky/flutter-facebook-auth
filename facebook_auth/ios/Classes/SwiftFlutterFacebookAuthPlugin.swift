@@ -1,8 +1,6 @@
 import Flutter
 import UIKit
-
 import FBSDKCoreKit
-
 
 public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {
     let facebookAuth = FacebookAuth()
@@ -15,11 +13,15 @@ public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {
     }
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        if call.method == "login" {
+            if let args = call.arguments as? [String: Any],
+                let appId = args["appId"] as? String {
+                    Settings.shared.appID = appId
+            }
+        }
         self.facebookAuth.handle(call, result: result)
     }
 
-    
-    
     /// START ALLOW HANDLE NATIVE FACEBOOK APP
     public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [AnyHashable : Any] = [:]) -> Bool {
         var options = [UIApplication.LaunchOptionsKey: Any]()

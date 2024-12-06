@@ -39,7 +39,8 @@ public class FlutterFacebookAuthPlugin implements FlutterPlugin, MethodCallHandl
                 List<String> permissions = call.argument("permissions");
                 String loginBehavior = call.argument("loginBehavior");
                 facebookAuth.setLoginBehavior(loginBehavior);
-                facebookAuth.login(this.activityPluginBinding.getActivity(), permissions, result);
+                String appId = call.argument("appId");
+                facebookAuth.login(this.activityPluginBinding.getActivity(), appId, permissions, result);
                 break;
             case "expressLogin":
                 facebookAuth.expressLogin(this.activityPluginBinding.getActivity(), result);

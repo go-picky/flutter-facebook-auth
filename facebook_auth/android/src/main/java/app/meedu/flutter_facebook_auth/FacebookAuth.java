@@ -1,23 +1,21 @@
 package app.meedu.flutter_facebook_auth;
 
-import android.app.Activity;
-import android.os.Bundle;
+import static com.facebook.FacebookSdk.APPLICATION_ID_PROPERTY;
 
-import com.facebook.AccessToken;
-import com.facebook.CallbackManager;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
-import com.facebook.LoginStatusCallback;
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import com.facebook.*;
 import com.facebook.login.LoginBehavior;
 import com.facebook.login.LoginManager;
-
-import org.json.JSONObject;
-
+import io.flutter.plugin.common.MethodChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import io.flutter.plugin.common.MethodChannel;
+import java.util.Locale;
+import org.json.JSONObject;
 
 public class FacebookAuth {
   private final LoginManager loginManager;
@@ -31,20 +29,54 @@ public class FacebookAuth {
   }
 
   /**
-   * makes an login request using the facebook sdk
-   *
-   * @param activity the android activity to handle onActivityResult event
-   * @param permissions list of permissions
-   * @param result flutter method channel result to send the response to the client
+   * @param accessToken an instance of Facebook SDK AccessToken
+   * @return a HashMap data
    */
-  void login(Activity activity, List<String> permissions, MethodChannel.Result result) {
+  static HashMap<String, Object> getAccessToken(final AccessToken accessToken) {
+    return new HashMap<String, Object>() {
+      {
+        put("token", accessToken.getToken());
+        put("userId", accessToken.getUserId());
+        put("expires", accessToken.getExpires().getTime());
+        put("applicationId", accessToken.getApplicationId());
+        put("lastRefresh", accessToken.getLastRefresh().getTime());
+        put("isExpired", accessToken.isExpired());
+        put("grantedPermissions", new ArrayList<>(accessToken.getPermissions()));
+        put("declinedPermissions", new ArrayList<>(accessToken.getDeclinedPermissions()));
+        put("dataAccessExpirationTime", accessToken.getDataAccessExpirationTime().getTime());
+      }
+    };
+  }
+
+  /**
+   * Logs in the user with the specified permissions.
+   *
+   * @param activity the current activity
+   * @param appId the Facebook application ID
+   * @param permissions the list of permissions to request
+   * @param result the result callback for the login operation
+   */
+  void login(
+      Activity activity,
+      String appId,
+      List<String> permissions,
+      MethodChannel.Result result) {
     final boolean hasPreviousSession = AccessToken.getCurrentAccessToken() != null;
     if (hasPreviousSession) {
       loginManager.logOut();
     }
     final boolean isOk = resultDelegate.setPendingResult(result);
     if (isOk) {
-      loginManager.logIn(activity, permissions);
+      try {
+        if (appId != null) {
+          FacebookSdk.setApplicationId(appId);
+        }
+        loginManager.logIn(activity, permissions);
+      } finally {
+        if (appId != null) {
+          this.resetApplicationId();
+        }
+      }
     }
   }
 
@@ -69,9 +101,9 @@ public class FacebookAuth {
         loginBehavior = LoginBehavior.DEVICE_AUTH;
         break;
       case "WEB_ONLY":
-        loginBehavior =  LoginBehavior.WEB_ONLY;
+        loginBehavior = LoginBehavior.WEB_ONLY;
         break;
-        
+
       default:
         loginBehavior = LoginBehavior.NATIVE_WITH_FALLBACK;
     }
@@ -169,22 +201,38 @@ public class FacebookAuth {
   }
 
   /**
-   * @param accessToken an instance of Facebook SDK AccessToken
-   * @return a HashMap data
+   * Resets the Facebook SDK application ID by reading it from the application's manifest file. This
+   * method is used to automatically set the application ID when it is not explicitly provided. It
+   * attempts to extract the application ID from the manifest file, and if it is prefixed with "fb",
+   * it removes the "fb" prefix before setting the application ID.
    */
-  static HashMap<String, Object> getAccessToken(final AccessToken accessToken) {
-    return new HashMap<String, Object>() {
-      {
-        put("token", accessToken.getToken());
-        put("userId", accessToken.getUserId());
-        put("expires", accessToken.getExpires().getTime());
-        put("applicationId", accessToken.getApplicationId());
-        put("lastRefresh", accessToken.getLastRefresh().getTime());
-        put("isExpired", accessToken.isExpired());
-        put("grantedPermissions", new ArrayList<>(accessToken.getPermissions()));
-        put("declinedPermissions", new ArrayList<>(accessToken.getDeclinedPermissions()));
-        put("dataAccessExpirationTime", accessToken.getDataAccessExpirationTime().getTime());
+  private void resetApplicationId() {
+    final Context applicationContext = FacebookSdk.getApplicationContext();
+    final String applicationId;
+    try {
+      final ApplicationInfo appInfo =
+          applicationContext
+              .getPackageManager()
+              .getApplicationInfo(
+                  applicationContext.getPackageName(), PackageManager.GET_META_DATA);
+
+      final Object appId = appInfo.metaData.get(APPLICATION_ID_PROPERTY);
+      if (appId instanceof String) {
+        final String appIdString = (String) appId;
+        if (appIdString.toLowerCase(Locale.ROOT).startsWith("fb")) {
+          applicationId = appIdString.substring(2);
+        } else {
+          applicationId = appIdString;
+        }
+      } else {
+        throw new FacebookException(
+            "App Ids cannot be directly placed in the manifest."
+                + "They must be prefixed by 'fb' or be placed in the string resource file.");
       }
-    };
+    } catch (final PackageManager.NameNotFoundException e) {
+      return;
+    }
+
+    FacebookSdk.setApplicationId(applicationId);
   }
 }

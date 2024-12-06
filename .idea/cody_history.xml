@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChatHistory">
+    <accountData>
+      <list>
+        <AccountData>
+          <accountId value="VXNlcjozODUyNTg=" />
+          <chats>
+            <list>
+              <chat>
+                <internalId value="2a1d2135-8f5a-42b2-b220-0c420f155338" />
+                <llm>
+                  <llm>
+                    <model value="openai/gpt-3.5-turbo" />
+                    <provider value="OpenAI" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="speed" />
+                      </list>
+                    </tags>
+                    <title value="GPT-3.5 Turbo" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To implement the iOS part for programmatically setting the App ID in the Flutter Facebook Auth plugin, you will need to make changes in the `FacebookAuth.swift` file in the iOS part of the plugin. Here's a general outline of the steps you can follow:&#10;&#10;1. Open the `FacebookAuth.swift` file located in the `ios/Classes` directory of the Flutter Facebook Auth plugin.&#10;&#10;2. Add a method to set the App ID programmatically. This method should take the new App ID as a parameter and update the configuration accordingly.&#10;&#10;3. Update the initialization logic in the `FacebookAuth.swift` file to use the programmatically set App ID if it is available.&#10;&#10;4. Make sure to handle any necessary error checking and validation to ensure that the new App ID is set correctly.&#10;&#10;Here's a simplified example of how you can add a method to set the App ID programmatically in the `FacebookAuth.swift` file:&#10;&#10;```swift&#10;func setAppID(_ newAppID: String) {&#10;    Settings.appID = newAppID&#10;}&#10;```&#10;&#10;You can call this method from your Flutter code to set the App ID before initializing the Facebook SDK.&#10;&#10;After making these changes, you should be able to programmatically set the App ID for the iOS part of the Flutter Facebook Auth plugin. Make sure to test the changes thoroughly to ensure that everything works as expected." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:09:25.794091" />
+              </chat>
+              <chat>
+                <internalId value="d84cc7a7-a545-4208-8b03-00a895965864" />
+                <llm>
+                  <llm>
+                    <model value="google/gemini-1.5-pro-latest" />
+                    <provider value="Google" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                      </list>
+                    </tags>
+                    <title value="Gemini 1.5 Pro" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="&lt;html&gt;&lt;b&gt;&amp;#9888; Error performing this action&lt;/b&gt;&lt;br&gt;&lt;br&gt;Please retry sending your message. If you tried to run a command, try it again.&lt;br&gt;If the issue persists, please &lt;a href=&quot;https://github.com/sourcegraph/jetbrains/issues/new?template=bug_report.yml&amp;labels=bug&amp;projects=sourcegraph/381&amp;title=bug%3A+Request+to+https%3A%2F%2Fsourcegraph.com%2F.api%2Fcompletions%2Fstream%3Fclient-name%3Djetbrains%26client-version%3D6.0.34+failed+with+400+Bad+Re...&amp;about=Android+Studio+Giraffe+%7C+2022.3.1+Patch+3%0ABuild+%23AI-223.8836.35.2231.11005911%2C+built+on+October+26%2C+2023%0ARuntime+version%3A+17.0.6%2B0-17.0.6b829.9-10027231+aarch64%0AVM%3A+OpenJDK+64-Bit+Server+VM+by+JetBrains+s.r.o.%0AmacOS+14.6.1%0AGC%3A+G1+Young+Generation%2C+G1+Old+Generation%0AMemory%3A+2048M%0ACores%3A+10%0AMetal+Rendering+is+ON%0ARegistry%3A%0A++++external.system.auto.import.disabled%3Dtrue%0A++++debugger.mayBringFrameToFrontOnBreakpoint%3Dfalse%0A++++ide.text.editor.with.preview.show.floating.toolbar%3Dfalse%0A%0ANon-Bundled+Plugins%3A%0A++++com.github.copilot+%281.4.0.3748%29%0A++++com.intellij.marketplace+%28223.8836.56%29%0A++++Dart+%28223.8977%29%0A++++izhangzhihao.rainbow.brackets+%282023.3.7%29%0A++++com.sourcegraph.jetbrains+%286.0.34%29%0A++++io.flutter+%2876.3.2%29%0A&amp;logs=Stacktrace%3A%0A%60%60%60text%0ARequest+to+https%3A%2F%2Fsourcegraph.com%2F.api%2Fcompletions%2Fstream%3Fclient-name%3Djetbrains%26client-version%3D6.0.34+failed+with+400+Bad+Request%3A+model+%22google%2Fgemini-1.5-pro-latest%22+is+not+available+on+sourcegraph.com%0A%0A%60%60%60&quot;&gt;create a support ticket&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;sub&gt;Error: Request to https://sourcegraph.com/.api/completions/stream?client-name=jetbrains&amp;client-version=6.0.34 failed with 400 Bad Request: model &quot;google/gemini-1.5-pro-latest&quot; is not available on sourcegraph.com&#10;&lt;/sub&gt;&lt;/html&gt;" />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:10:12.414801" />
+              </chat>
+              <chat>
+                <internalId value="3a7aee9a-792b-425e-93db-fe4e4b232228" />
+                <llm>
+                  <llm>
+                    <model value="openai/gpt-4o" />
+                    <provider value="OpenAI" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="pro" />
+                        <option value="recommended" />
+                        <option value="accuracy" />
+                      </list>
+                    </tags>
+                    <title value="GPT-4o" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To achieve the functionality of programmatically setting the `appId` for different Facebook applications in your Flutter project, you need to make adjustments both in the native iOS code and the Dart code. Here's a step-by-step guide to help you implement this:&#10;&#10;### iOS Implementation&#10;&#10;1. **Modify the iOS Native Code:**&#10;&#10;   You'll need to modify the iOS native code to accept a dynamic `appId`. This involves updating the `FacebookAuth` class or equivalent in the iOS part of the plugin.&#10;&#10;   - Open the iOS project in Xcode.&#10;   - Locate the file where the Facebook SDK is initialized, typically in `AppDelegate.swift` or a similar file.&#10;   - Modify the initialization code to accept a dynamic `appId`. You might need to expose a method to set the `appId` from Flutter.&#10;&#10;   Example (Swift):&#10;   ```swift&#10;   import FBSDKCoreKit&#10;&#10;   @UIApplicationMain&#10;   class AppDelegate: FlutterAppDelegate {&#10;       override func application(&#10;           _ application: UIApplication,&#10;           didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?&#10;       ) -&gt; Bool {&#10;           // Initialize with a default appId or handle it dynamically&#10;           ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)&#10;           return super.application(application, didFinishLaunchingWithOptions: launchOptions)&#10;       }&#10;&#10;       // Add a method to set the appId dynamically&#10;       func setFacebookAppId(_ appId: String) {&#10;           Settings.appID = appId&#10;       }&#10;   }&#10;   ```&#10;&#10;2. **Expose the Method to Flutter:**&#10;&#10;   You'll need to expose a method to Flutter that allows you to call this new `setFacebookAppId` method.&#10;&#10;   - In the iOS plugin code, add a method channel handler for setting the `appId`.&#10;&#10;   Example (Swift):&#10;   ```swift&#10;   public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {&#10;       public static func register(with registrar: FlutterPluginRegistrar) {&#10;           let channel = FlutterMethodChannel(name: &quot;app.meedu/flutter_facebook_auth&quot;, binaryMessenger: registrar.messenger())&#10;           let instance = SwiftFlutterFacebookAuthPlugin()&#10;           registrar.addMethodCallDelegate(instance, channel: channel)&#10;       }&#10;&#10;       public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;           switch call.method {&#10;           case &quot;setAppId&quot;:&#10;               if let args = call.arguments as? [String: Any],&#10;                  let appId = args[&quot;appId&quot;] as? String {&#10;                   setFacebookAppId(appId)&#10;                   result(nil)&#10;               } else {&#10;                   result(FlutterError(code: &quot;INVALID_ARGUMENT&quot;, message: &quot;App ID not provided&quot;, details: nil))&#10;               }&#10;           default:&#10;               result(FlutterMethodNotImplemented)&#10;           }&#10;       }&#10;&#10;       private func setFacebookAppId(_ appId: String) {&#10;           Settings.appID = appId&#10;       }&#10;   }&#10;   ```&#10;&#10;### Dart Implementation&#10;&#10;1. **Update the Dart Code:**&#10;&#10;   In your Dart code, you need to call the new method to set the `appId` before performing any Facebook operations.&#10;&#10;   - Open `flutter_facebook_auth.dart` or your main Dart file where you handle Facebook authentication.&#10;   - Add a method to set the `appId`.&#10;&#10;   Example (Dart):&#10;   ```dart&#10;   import 'package:flutter/services.dart';&#10;&#10;   class FlutterFacebookAuth {&#10;     static const MethodChannel _channel = MethodChannel('app.meedu/flutter_facebook_auth');&#10;&#10;     Future&lt;void&gt; setAppId(String appId) async {&#10;       try {&#10;         await _channel.invokeMethod('setAppId', {'appId': appId});&#10;       } on PlatformException catch (e) {&#10;         print(&quot;Failed to set appId: '${e.message}'.&quot;);&#10;       }&#10;     }&#10;   }&#10;   ```&#10;&#10;2. **Use the Method in Your App:**&#10;&#10;   Before initiating any Facebook login or API calls, set the `appId` using the method you just created.&#10;&#10;   Example:&#10;   ```dart&#10;   final facebookAuth = FlutterFacebookAuth();&#10;&#10;   void configureFacebookApp(String appId) async {&#10;     await facebookAuth.setAppId(appId);&#10;     // Proceed with login or other operations&#10;   }&#10;   ```&#10;&#10;By following these steps, you should be able to dynamically set the `appId` for different Facebook applications in both Android and iOS environments within your Flutter project." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:10:47.535784" />
+              </chat>
+              <chat>
+                <internalId value="1a654da5-4814-4552-8d02-fe85d7c00f7c" />
+                <llm>
+                  <llm>
+                    <model value="openai/gpt-4o" />
+                    <provider value="OpenAI" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="pro" />
+                        <option value="recommended" />
+                        <option value="accuracy" />
+                      </list>
+                    </tags>
+                    <title value="GPT-4o" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To implement the ability to programmatically set the `appId` for iOS in your Flutter project, you'll need to modify the iOS native code in a similar way to how you've done it for Android. Here's a general guide on how you can achieve this:&#10;&#10;### iOS Native Code&#10;&#10;1. **Locate the iOS Plugin Code:**&#10;   - Navigate to the iOS directory of your Flutter plugin. This is typically found under `ios/Classes` in the plugin's directory.&#10;&#10;2. **Modify the iOS Plugin Code:**&#10;   - Open the main plugin file, which is usually named something like `SwiftFlutterFacebookAuthPlugin.swift`.&#10;   - You'll need to modify the method that handles the login to accept an `appId` parameter.&#10;&#10;3. **Update the Login Method:**&#10;   - Find the method responsible for initializing the Facebook SDK or handling the login.&#10;   - Modify this method to accept an `appId` parameter and use it to configure the Facebook SDK.&#10;&#10;Here's a simplified example of what the changes might look like in Swift:&#10;&#10;```swift&#10;import FBSDKCoreKit&#10;import FBSDKLoginKit&#10;&#10;public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {&#10;    var loginManager = LoginManager()&#10;&#10;    public static func register(with registrar: FlutterPluginRegistrar) {&#10;        let channel = FlutterMethodChannel(name: &quot;app.meedu/flutter_facebook_auth&quot;, binaryMessenger: registrar.messenger())&#10;        let instance = SwiftFlutterFacebookAuthPlugin()&#10;        registrar.addMethodCallDelegate(instance, channel: channel)&#10;    }&#10;&#10;    public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;        switch call.method {&#10;        case &quot;login&quot;:&#10;            if let args = call.arguments as? [String: Any],&#10;               let appId = args[&quot;appId&quot;] as? String,&#10;               let permissions = args[&quot;permissions&quot;] as? [String] {&#10;                self.login(appId: appId, permissions: permissions, result: result)&#10;            } else {&#10;                result(FlutterError(code: &quot;INVALID_ARGUMENTS&quot;, message: &quot;Invalid arguments&quot;, details: nil))&#10;            }&#10;        default:&#10;            result(FlutterMethodNotImplemented)&#10;        }&#10;    }&#10;&#10;    private func login(appId: String, permissions: [String], result: @escaping FlutterResult) {&#10;        // Configure the Facebook SDK with the provided appId&#10;        Settings.appID = appId&#10;&#10;        // Perform the login&#10;        loginManager.logIn(permissions: permissions, from: nil) { (loginResult, error) in&#10;            if let error = error {&#10;                result(FlutterError(code: &quot;LOGIN_FAILED&quot;, message: error.localizedDescription, details: nil))&#10;            } else if let loginResult = loginResult, !loginResult.isCancelled {&#10;                result([&quot;status&quot;: &quot;success&quot;, &quot;accessToken&quot;: AccessToken.current?.tokenString ?? &quot;&quot;])&#10;            } else {&#10;                result([&quot;status&quot;: &quot;cancelled&quot;])&#10;            }&#10;        }&#10;    }&#10;}&#10;```&#10;&#10;### Flutter Dart Code&#10;&#10;1. **Update the Dart Method:**&#10;   - In your Dart code, you need to ensure that when you call the login method, you pass the `appId` as an argument.&#10;&#10;2. **Modify the Method Call:**&#10;   - Open the Dart file where you handle the Facebook login, typically `flutter_facebook_auth.dart`.&#10;   - Update the method that invokes the platform channel to include the `appId`.&#10;&#10;Here's an example of how you might update the Dart code:&#10;&#10;```dart&#10;import 'package:flutter/services.dart';&#10;&#10;class FlutterFacebookAuth {&#10;  static const MethodChannel _channel = MethodChannel('app.meedu/flutter_facebook_auth');&#10;&#10;  Future&lt;Map&lt;String, dynamic&gt;&gt; login({required String appId, List&lt;String&gt; permissions = const ['email']}) async {&#10;    final result = await _channel.invokeMethod('login', {&#10;      'appId': appId,&#10;      'permissions': permissions,&#10;    });&#10;    return Map&lt;String, dynamic&gt;.from(result);&#10;  }&#10;}&#10;```&#10;&#10;### Summary&#10;&#10;- **iOS Native Code:** Modify the Swift code to accept an `appId` parameter and configure the Facebook SDK with it.&#10;- **Dart Code:** Update the method that calls the platform channel to pass the `appId`.&#10;&#10;By following these steps, you should be able to programmatically set the `appId` for Facebook login on both Android and iOS in your Flutter project." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:12:03.038783" />
+              </chat>
+              <chat>
+                <internalId value="8f38c9bb-fb4d-4dd9-9260-3e2fc8f6a0a2" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-5-sonnet-20240620" />
+                    <provider value="Anthropic" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                        <option value="recommended" />
+                        <option value="free" />
+                      </list>
+                    </tags>
+                    <title value="Claude 3.5 Sonnet" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To implement the iOS bit for programmatically setting the appId upon login, you'll need to modify the Swift code in the iOS part of the plugin. Here's how you can approach this:&#10;&#10;1. In the iOS Swift file (likely named SwiftFlutterFacebookAuthPlugin.swift), you'll need to add a method to set the appId dynamically.&#10;&#10;2. Expose this method through the MethodChannel in the Swift code.&#10;&#10;3. In the Dart part of the plugin (flutter_facebook_auth.dart), add a method to call this new iOS-specific method.&#10;&#10;4. Update the login method in both the Dart and Swift code to use the dynamically set appId.&#10;&#10;5. For the Instagram business pages connection, you might need to create a separate method in both Swift and Dart to handle this specific functionality.&#10;&#10;6. Ensure that you're properly handling the different appIds and their respective permissions in your Facebook Developer Console.&#10;&#10;Remember to test thoroughly on both iOS simulators and real devices to ensure the functionality works as expected across different iOS versions." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:13:44.520139" />
+              </chat>
+              <chat>
+                <internalId value="0d14a218-7603-4c01-8581-3dfa36deee94" />
+                <llm>
+                  <llm>
+                    <model value="google/gemini-1.5-pro-latest" />
+                    <provider value="Google" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                      </list>
+                    </tags>
+                    <title value="Gemini 1.5 Pro" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="&lt;html&gt;&lt;b&gt;&amp;#9888; Error performing this action&lt;/b&gt;&lt;br&gt;&lt;br&gt;Please retry sending your message. If you tried to run a command, try it again.&lt;br&gt;If the issue persists, please &lt;a href=&quot;https://github.com/sourcegraph/jetbrains/issues/new?template=bug_report.yml&amp;labels=bug&amp;projects=sourcegraph/381&amp;title=bug%3A+Request+to+https%3A%2F%2Fsourcegraph.com%2F.api%2Fcompletions%2Fstream%3Fclient-name%3Djetbrains%26client-version%3D6.0.34+failed+with+400+Bad+Re...&amp;about=Android+Studio+Giraffe+%7C+2022.3.1+Patch+3%0ABuild+%23AI-223.8836.35.2231.11005911%2C+built+on+October+26%2C+2023%0ARuntime+version%3A+17.0.6%2B0-17.0.6b829.9-10027231+aarch64%0AVM%3A+OpenJDK+64-Bit+Server+VM+by+JetBrains+s.r.o.%0AmacOS+14.6.1%0AGC%3A+G1+Young+Generation%2C+G1+Old+Generation%0AMemory%3A+2048M%0ACores%3A+10%0AMetal+Rendering+is+ON%0ARegistry%3A%0A++++external.system.auto.import.disabled%3Dtrue%0A++++debugger.mayBringFrameToFrontOnBreakpoint%3Dfalse%0A++++ide.text.editor.with.preview.show.floating.toolbar%3Dfalse%0A%0ANon-Bundled+Plugins%3A%0A++++com.github.copilot+%281.4.0.3748%29%0A++++com.intellij.marketplace+%28223.8836.56%29%0A++++Dart+%28223.8977%29%0A++++izhangzhihao.rainbow.brackets+%282023.3.7%29%0A++++com.sourcegraph.jetbrains+%286.0.34%29%0A++++io.flutter+%2876.3.2%29%0A&amp;logs=Stacktrace%3A%0A%60%60%60text%0ARequest+to+https%3A%2F%2Fsourcegraph.com%2F.api%2Fcompletions%2Fstream%3Fclient-name%3Djetbrains%26client-version%3D6.0.34+failed+with+400+Bad+Request%3A+model+%22google%2Fgemini-1.5-pro-latest%22+is+not+available+on+sourcegraph.com%0A%0A%60%60%60&quot;&gt;create a support ticket&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;sub&gt;Error: Request to https://sourcegraph.com/.api/completions/stream?client-name=jetbrains&amp;client-version=6.0.34 failed with 400 Bad Request: model &quot;google/gemini-1.5-pro-latest&quot; is not available on sourcegraph.com&#10;&lt;/sub&gt;&lt;/html&gt;" />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:14:13.172191" />
+              </chat>
+              <chat>
+                <internalId value="ae6ec14d-f0af-4911-ba8c-92d6cd6ab066" />
+                <llm>
+                  <llm>
+                    <model value="google/gemini-1.5-flash-latest" />
+                    <provider value="Google" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="speed" />
+                      </list>
+                    </tags>
+                    <title value="Gemini 1.5 Flash" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You can't directly change the Facebook App ID during a single login session using the `flutter_facebook_auth` plugin as it's designed.  The App ID is fundamentally tied to the Facebook SDK initialization and the authorization flow.  Attempting to switch App IDs mid-session would break the authentication process.&#10;&#10;To achieve your goal of using two different Facebook App IDs (one for user login and another for connecting business pages), you need a different architectural approach.  You can't do it within the existing `FacebookAuth` plugin's structure.  Here's how you should approach this:&#10;&#10;**1. Separate Plugins/Modules:**&#10;&#10;The cleanest solution is to create two separate instances of the Facebook login functionality, each with its own App ID:&#10;&#10;* **User Login Plugin:** This uses the original `flutter_facebook_auth` plugin (or a slightly modified version if absolutely necessary) with the App ID for user authentication.&#10;&#10;* **Business Page Connection Plugin:** This would either be a completely separate plugin (recommended for maintainability) or a carefully separated module within your app.  This plugin would handle the connection to the second Facebook App ID specifically for business page interactions.  This might require using the Facebook Graph API directly, bypassing the `flutter_facebook_auth` plugin's simplified login flow.&#10;&#10;**2. iOS Implementation (Objective-C/Swift):**&#10;&#10;For the iOS side, you'll need to create two distinct instances of the Facebook SDK.  Each instance will be initialized with its respective App ID.  This means you'll have two separate `FBSDKApplicationDelegate` instances (or equivalent in Swift).&#10;&#10;* **Example (Swift - Conceptual):**&#10;&#10;```swift&#10;// For User Login&#10;let facebookSDKLogin = FBSDKApplicationDelegate()&#10;facebookSDKLogin.application(application, didFinishLaunchingWithOptions: launchOptions) // ... your existing initialization&#10;&#10;// For Business Page Connection&#10;let facebookSDKBusiness = FBSDKApplicationDelegate()&#10;facebookSDKBusiness.application(application, didFinishLaunchingWithOptions: launchOptions) // ... initialization with different App ID&#10;```&#10;&#10;You'll need to manage the separate SDK instances and their respective login/logout processes carefully.&#10;&#10;**3. Dart (Flutter) Implementation:**&#10;&#10;In your Dart code, you'll create two distinct interfaces or classes to interact with these two separate iOS (and Android) implementations.  These interfaces would expose methods for login, logout, and accessing user data for each App ID.&#10;&#10;**4.  Facebook Graph API (for Business Page Connection):**&#10;&#10;For connecting business pages, you'll likely need to use the Facebook Graph API directly.  After the user logs in with the first App ID, you'll use the access token to make calls to the Graph API to manage the connection to the business page using the second App ID (this might require additional permissions).&#10;&#10;**5.  Handling Access Tokens:**&#10;&#10;You'll need a robust mechanism to manage the two separate access tokens.  Consider using `flutter_secure_storage` to securely store them.&#10;&#10;**Important Considerations:**&#10;&#10;* **Permissions:** Carefully review the required Facebook permissions for both user login and business page connection.  Request only the necessary permissions to minimize privacy concerns.&#10;* **Error Handling:** Implement thorough error handling for both login and API calls.&#10;* **App Review:** Be aware of Facebook's app review process and ensure your app complies with their policies.&#10;&#10;&#10;This approach is significantly more complex than trying to modify the existing plugin.  The separation of concerns will make your code more maintainable and less prone to errors.  Remember to consult the official Facebook SDK documentation for iOS and the Graph API documentation for details on how to interact with the Facebook platform." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:14:24.481097" />
+              </chat>
+              <chat>
+                <internalId value="786981a9-6f67-4da9-9e62-adadfe89c6df" />
+                <llm>
+                  <llm>
+                    <model value="openai/gpt-4o" />
+                    <provider value="OpenAI" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="pro" />
+                        <option value="recommended" />
+                        <option value="accuracy" />
+                      </list>
+                    </tags>
+                    <title value="GPT-4o" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To achieve the functionality of programmatically setting the `appId` for Facebook login on iOS, you will need to modify the iOS native code in your Flutter plugin. Since you've already handled the Android side, I'll guide you through the iOS implementation.&#10;&#10;### iOS Implementation&#10;&#10;1. **Locate the iOS Native Code:**&#10;   - Navigate to the iOS directory of your Flutter plugin. This is typically found under `ios/Classes` in the plugin's directory.&#10;&#10;2. **Modify the iOS Code to Accept Dynamic App ID:**&#10;   - You will need to modify the Objective-C or Swift code (depending on what the plugin uses) to accept an `appId` parameter and use it for Facebook login.&#10;&#10;3. **Objective-C Example:**&#10;&#10;   If your plugin uses Objective-C, you might have a file like `FacebookAuthPlugin.m`. You would modify it to accept an `appId` parameter:&#10;&#10;   ```objc&#10;   #import &lt;FBSDKCoreKit/FBSDKCoreKit.h&gt;&#10;   #import &lt;FBSDKLoginKit/FBSDKLoginKit.h&gt;&#10;&#10;   @interface FacebookAuthPlugin : NSObject&lt;FlutterPlugin&gt;&#10;   @property (nonatomic, strong) FBSDKLoginManager *loginManager;&#10;   @end&#10;&#10;   @implementation FacebookAuthPlugin&#10;&#10;   - (instancetype)init {&#10;       self = [super init];&#10;       if (self) {&#10;           _loginManager = [[FBSDKLoginManager alloc] init];&#10;       }&#10;       return self;&#10;   }&#10;&#10;   - (void)loginWithAppId:(NSString *)appId permissions:(NSArray *)permissions result:(FlutterResult)result {&#10;       [FBSDKSettings setAppID:appId];&#10;       [self.loginManager logInWithPermissions:permissions fromViewController:nil handler:^(FBSDKLoginManagerLoginResult *loginResult, NSError *error) {&#10;           if (error) {&#10;               result([FlutterError errorWithCode:@&quot;LOGIN_FAILED&quot; message:error.localizedDescription details:nil]);&#10;           } else if (loginResult.isCancelled) {&#10;               result([FlutterError errorWithCode:@&quot;LOGIN_CANCELLED&quot; message:@&quot;Login was cancelled&quot; details:nil]);&#10;           } else {&#10;               result(loginResult.token.tokenString);&#10;           }&#10;       }];&#10;   }&#10;&#10;   @end&#10;   ```&#10;&#10;4. **Swift Example:**&#10;&#10;   If your plugin uses Swift, you might have a file like `FacebookAuthPlugin.swift`. You would modify it similarly:&#10;&#10;   ```swift&#10;   import FBSDKCoreKit&#10;   import FBSDKLoginKit&#10;&#10;   public class SwiftFacebookAuthPlugin: NSObject, FlutterPlugin {&#10;       private var loginManager = LoginManager()&#10;&#10;       public static func register(with registrar: FlutterPluginRegistrar) {&#10;           let channel = FlutterMethodChannel(name: &quot;flutter_facebook_auth&quot;, binaryMessenger: registrar.messenger())&#10;           let instance = SwiftFacebookAuthPlugin()&#10;           registrar.addMethodCallDelegate(instance, channel: channel)&#10;       }&#10;&#10;       public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;           switch call.method {&#10;           case &quot;login&quot;:&#10;               if let args = call.arguments as? [String: Any],&#10;                  let appId = args[&quot;appId&quot;] as? String,&#10;                  let permissions = args[&quot;permissions&quot;] as? [String] {&#10;                   Settings.appID = appId&#10;                   loginManager.logIn(permissions: permissions, from: nil) { loginResult, error in&#10;                       if let error = error {&#10;                           result(FlutterError(code: &quot;LOGIN_FAILED&quot;, message: error.localizedDescription, details: nil))&#10;                       } else if let loginResult = loginResult, loginResult.isCancelled {&#10;                           result(FlutterError(code: &quot;LOGIN_CANCELLED&quot;, message: &quot;Login was cancelled&quot;, details: nil))&#10;                       } else {&#10;                           result(loginResult?.token?.tokenString)&#10;                       }&#10;                   }&#10;               } else {&#10;                   result(FlutterError(code: &quot;INVALID_ARGUMENTS&quot;, message: &quot;Invalid arguments&quot;, details: nil))&#10;               }&#10;           default:&#10;               result(FlutterMethodNotImplemented)&#10;           }&#10;       }&#10;   }&#10;   ```&#10;&#10;5. **Update the Dart Code:**&#10;&#10;   In your Dart code (`flutter_facebook_auth.dart`), ensure that you pass the `appId` to the native iOS method call:&#10;&#10;   ```dart&#10;   Future&lt;void&gt; login(String appId, List&lt;String&gt; permissions) async {&#10;     await _channel.invokeMethod('login', {&#10;       'appId': appId,&#10;       'permissions': permissions,&#10;     });&#10;   }&#10;   ```&#10;&#10;6. **Testing:**&#10;&#10;   - After making these changes, test the iOS implementation thoroughly to ensure that the dynamic `appId` is being set correctly and that the login process works as expected.&#10;&#10;By following these steps, you should be able to programmatically set the `appId` for Facebook login on iOS, similar to what you've achieved on Android." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:15:16.914825" />
+              </chat>
+              <chat>
+                <internalId value="a06935d5-456c-41dc-9595-f5b213dbd07c" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-5-sonnet-20240620" />
+                    <provider value="Anthropic" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                        <option value="recommended" />
+                        <option value="free" />
+                      </list>
+                    </tags>
+                    <title value="Claude 3.5 Sonnet" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java  @.../facebook_auth/lib/flutter_facebook_auth.dart " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To implement the iOS part for programmatically setting the appId upon login, you'll need to modify both the Dart code in `flutter_facebook_auth.dart` and the Swift code in the iOS implementation.&#10;&#10;In `flutter_facebook_auth.dart`, update the `login` method to accept an `appId` parameter:&#10;&#10;```dart&#10;Future&lt;LoginResult&gt; login({&#10;  List&lt;String&gt; permissions = const ['email', 'public_profile'],&#10;  LoginBehavior loginBehavior = LoginBehavior.nativeWithFallback,&#10;  LoginTracking loginTracking = LoginTracking.limited,&#10;  String? appId,&#10;  String? nonce,&#10;}) =&gt;&#10;    _authPlatform.login(&#10;      permissions: permissions,&#10;      loginBehavior: loginBehavior,&#10;      loginTracking: loginTracking,&#10;      appId: appId,&#10;      nonce: nonce,&#10;    );&#10;```&#10;&#10;For the iOS implementation, you'll need to modify the Swift code in the `FacebookAuth.swift` file. Add a method to set the app ID and update the login method to use it:&#10;&#10;```swift&#10;@objc public class FacebookAuth: NSObject {&#10;    // ... existing code ...&#10;&#10;    @objc public func setAppId(_ appId: String) {&#10;        Settings.appID = appId&#10;    }&#10;&#10;    @objc public func login(&#10;        permissions: [String],&#10;        appId: String?,&#10;        completion: @escaping (String) -&gt; Void&#10;    ) {&#10;        if let appId = appId {&#10;            setAppId(appId)&#10;        }&#10;        // ... existing login code ...&#10;    }&#10;&#10;    // ... other methods ...&#10;}&#10;```&#10;&#10;Then, update the `SwiftFlutterFacebookAuthPlugin.swift` file to use the new `setAppId` method in the `handle` function:&#10;&#10;```swift&#10;public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;    switch call.method {&#10;    case &quot;login&quot;:&#10;        guard let args = call.arguments as? [String: Any],&#10;              let permissions = args[&quot;permissions&quot;] as? [String],&#10;              let appId = args[&quot;appId&quot;] as? String? else {&#10;            result(FlutterError(code: &quot;INVALID_ARGUMENTS&quot;, message: &quot;Invalid arguments for login&quot;, details: nil))&#10;            return&#10;        }&#10;        facebookAuth.login(permissions: permissions, appId: appId) { response in&#10;            result(response)&#10;        }&#10;    // ... other cases ...&#10;    }&#10;}&#10;```&#10;&#10;These changes will allow you to programmatically set the app ID for iOS when calling the login method, similar to what you've already implemented for Android." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="how can I develop for this, how can I open this repo in xcode and see what methods are available and all that" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To develop for this project and explore the available methods in Xcode:&#10;&#10;1. Clone the repository to your local machine.&#10;&#10;2. Open the iOS project in Xcode:&#10;   - Navigate to the `facebook_auth/ios` directory.&#10;   - Open the `Runner.xcworkspace` file.&#10;&#10;3. In Xcode, you can explore the Swift files:&#10;   - Look for `FacebookAuth.swift` and `SwiftFlutterFacebookAuthPlugin.swift` in the project navigator.&#10;   - These files contain the iOS-specific implementation of the Facebook authentication methods.&#10;&#10;4. To see available methods:&#10;   - Open the relevant Swift files.&#10;   - Look for `@objc` annotations, which indicate methods exposed to Objective-C (and thus to the Flutter plugin).&#10;&#10;5. You can add breakpoints and run the app in debug mode to step through the code and understand its flow.&#10;&#10;6. To test changes:&#10;   - Modify the Swift code as needed.&#10;   - Run the Flutter app with `flutter run` to see your changes in action.&#10;&#10;This approach will give you a comprehensive view of the iOS implementation and allow you to make and test modifications effectively." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="There is no  Runner.xcworkspace file. in @facebook_auth" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You're right. The Runner.xcworkspace file is not present in the facebook_auth directory. Instead, you should look for the .xcodeproj file in the ios folder of the facebook_auth package. This file can be opened with Xcode to view and edit the iOS-specific code for the plugin." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="There is also no  Runner.xcworkspace file." />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You're correct. There is no Runner.xcworkspace file in the provided codebase context. The structure of this project is different from a typical Flutter app, as it's a plugin rather than a full application. To work on the iOS part of this plugin, you'll need to look for the Xcode project file (.xcodeproj) or the source files directly in the ios folder of the facebook_auth package." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="There is also no xcodeproj" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You're right. There is no .xcodeproj file in the provided codebase context. The structure of this plugin project is different from what we initially expected. Let's explore alternative ways to work with the iOS code for this plugin." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="What else can i do?" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You can explore the iOS code directly in the source files. Look for Swift files in the facebook_auth/ios/Classes directory. These files contain the iOS-specific implementation of the Facebook authentication methods. You can edit these files using any text editor or IDE that supports Swift.&#10;&#10;To test your changes, you'll need to use this plugin in a Flutter project. Create a new Flutter project, add this plugin as a local dependency in your pubspec.yaml, and run the app on an iOS simulator or device. This will allow you to debug and test your modifications to the iOS code.&#10;&#10;Additionally, you can use Xcode's command-line tools to compile and check the Swift code for errors without needing a full Xcode project." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="How can I do the last bit if I cant open the project in Xcode" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To work on the iOS code without opening the project in Xcode, you can use a text editor or IDE that supports Swift to edit the files directly. Look for Swift files in the `facebook_auth/ios/Classes` directory.&#10;&#10;For compiling and checking Swift code without Xcode, you can use Swift command-line tools. Install them if you haven't already, then use commands like `swiftc` to compile individual files or check for errors.&#10;&#10;To test changes, create a new Flutter project, add your modified plugin as a local dependency, and run it on an iOS simulator or device. This approach allows you to iterate on the iOS code and see the results in a real Flutter app environment." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:24:49.031148" />
+              </chat>
+              <chat>
+                <internalId value="895b492e-3aec-4113-a2d4-32628bbe2f68" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-5-sonnet-20240620" />
+                    <provider value="Anthropic" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                        <option value="recommended" />
+                        <option value="free" />
+                      </list>
+                    </tags>
+                    <title value="Claude 3.5 Sonnet" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java @.../facebook_auth/lib/flutter_facebook_auth.dart" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="To implement the iOS part for programmatically setting the appId upon login, you'll need to modify the Swift code in the iOS plugin. Here's how you can approach this:&#10;&#10;1. In the iOS plugin, locate the Swift file that handles the login functionality (likely named something like SwiftFlutterFacebookAuthPlugin.swift).&#10;&#10;2. Modify the login method to accept an appId parameter.&#10;&#10;3. Use the FBSDKCoreKit to set the appId before initiating the login process.&#10;&#10;4. In the Dart code (flutter_facebook_auth.dart), update the login method to accept an appId parameter and pass it to the platform-specific implementation.&#10;&#10;5. Update the method channel call in the iOS Swift code to receive and use the appId parameter.&#10;&#10;6. Ensure that the Android implementation you've already created aligns with these changes.&#10;&#10;This approach will allow you to dynamically set the appId for different Facebook applications as needed in your Flutter project." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:26:06.629996" />
+              </chat>
+              <chat>
+                <internalId value="4576d654-9f30-4b09-9e3b-4fe387e22840" />
+                <llm>
+                  <llm>
+                    <model value="anthropic/claude-3-5-sonnet-20240620" />
+                    <provider value="Anthropic" />
+                    <tags>
+                      <list>
+                        <option value="gateway" />
+                        <option value="accuracy" />
+                        <option value="recommended" />
+                        <option value="free" />
+                      </list>
+                    </tags>
+                    <title value="Claude 3.5 Sonnet" />
+                    <usage>
+                      <list>
+                        <option value="chat" />
+                        <option value="edit" />
+                      </list>
+                    </usage>
+                  </llm>
+                </llm>
+                <messages>
+                  <list>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I'm working on a flutter project, however my app needs to be able to progamatically set the appId upon login, I want to authenticate users with one Facebook application, and want to connect users' Facebook/Instagram business pages in another Facebook application. This is a fork of the flutter-facebook-auth I'm trying to adjust to achieve this. I've already done the Android java bit to achieve this since I'm familiar with java, but how should I go about implementing the iOS bit @.../meedu/flutter_facebook_auth/FacebookAuth.java  @.../facebook_auth/lib/flutter_facebook_auth.dart be specific, give me all of the code changes I need to make" />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="Certainly! To implement the ability to programmatically set the appId upon login for iOS, you'll need to make changes in both the Dart and Swift/Objective-C code. Here are the specific code changes you need to make:&#10;&#10;1. In `flutter_facebook_auth.dart`:&#10;&#10;Add an `appId` parameter to the `login` method:&#10;&#10;```dart&#10;Future&lt;LoginResult&gt; login({&#10;  List&lt;String&gt; permissions = const ['email', 'public_profile'],&#10;  LoginBehavior loginBehavior = LoginBehavior.nativeWithFallback,&#10;  LoginTracking loginTracking = LoginTracking.limited,&#10;  String? appId,&#10;  String? nonce,&#10;}) =&gt;&#10;    _authPlatform.login(&#10;      permissions: permissions,&#10;      loginBehavior: loginBehavior,&#10;      loginTracking: loginTracking,&#10;      appId: appId,&#10;      nonce: nonce,&#10;    );&#10;```&#10;&#10;2. In the iOS native code (Swift):&#10;&#10;Create a new file named `FacebookAuthHandler.swift` in the iOS folder of your plugin:&#10;&#10;```swift&#10;import Foundation&#10;import FBSDKCoreKit&#10;&#10;@objc public class FacebookAuthHandler: NSObject {&#10;    @objc public static func setAppId(_ appId: String) {&#10;        Settings.appID = appId&#10;    }&#10;}&#10;```&#10;&#10;3. In the iOS native code (Objective-C):&#10;&#10;Update the `SwiftFlutterFacebookAuthPlugin.m` file:&#10;&#10;```objc&#10;#import &quot;SwiftFlutterFacebookAuthPlugin.h&quot;&#10;#import &lt;flutter_facebook_auth/flutter_facebook_auth-Swift.h&gt;&#10;&#10;@implementation SwiftFlutterFacebookAuthPlugin&#10;+ (void)registerWithRegistrar:(NSObject&lt;FlutterPluginRegistrar&gt;*)registrar {&#10;  [SwiftFlutterFacebookAuthPlugin registerWithRegistrar:registrar];&#10;}&#10;@end&#10;```&#10;&#10;4. In the iOS native code (Swift):&#10;&#10;Update the `SwiftFlutterFacebookAuthPlugin.swift` file:&#10;&#10;```swift&#10;import Flutter&#10;import UIKit&#10;import FBSDKCoreKit&#10;&#10;public class SwiftFlutterFacebookAuthPlugin: NSObject, FlutterPlugin {&#10;  public static func register(with registrar: FlutterPluginRegistrar) {&#10;    let channel = FlutterMethodChannel(name: &quot;flutter_facebook_auth&quot;, binaryMessenger: registrar.messenger())&#10;    let instance = SwiftFlutterFacebookAuthPlugin()&#10;    registrar.addMethodCallDelegate(instance, channel: channel)&#10;  }&#10;&#10;  public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;    switch call.method {&#10;    case &quot;login&quot;:&#10;      if let args = call.arguments as? [String: Any],&#10;         let appId = args[&quot;appId&quot;] as? String {&#10;        FacebookAuthHandler.setAppId(appId)&#10;      }&#10;      // Proceed with login logic&#10;      // ...&#10;    // Handle other methods&#10;    // ...&#10;    default:&#10;      result(FlutterMethodNotImplemented)&#10;    }&#10;  }&#10;}&#10;```&#10;&#10;These changes will allow you to set the appId programmatically when calling the login method from your Flutter code. The iOS implementation will use the provided appId for the Facebook SDK initialization before proceeding with the login process.&#10;&#10;Remember to update your `Podfile` and run `pod install` in the iOS folder to ensure all dependencies are properly linked." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="Here is my current SwiftFlutterFacebookAuthPlugin, what changes do I need to make @.../ios/Classes/SwiftFlutterFacebookAuthPlugin.swift " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="Based on the provided SwiftFlutterFacebookAuthPlugin code, here are the changes you need to make:&#10;&#10;1. Add a new method to handle setting the app ID:&#10;&#10;```swift&#10;private func setAppId(_ appId: String) {&#10;    Settings.appID = appId&#10;}&#10;```&#10;&#10;2. Modify the `handle` method to check for the appId parameter and set it before proceeding with the login:&#10;&#10;```swift&#10;public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;    if call.method == &quot;login&quot; {&#10;        if let args = call.arguments as? [String: Any],&#10;           let appId = args[&quot;appId&quot;] as? String {&#10;            setAppId(appId)&#10;        }&#10;    }&#10;    self.facebookAuth.handle(call, result: result)&#10;}&#10;```&#10;&#10;3. Update the `FacebookAuth` class to accept the appId parameter in its login method. You'll need to modify the `FacebookAuth.swift` file (which is not provided in the context, but should exist in your project):&#10;&#10;```swift&#10;class FacebookAuth {&#10;    func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {&#10;        switch call.method {&#10;        case &quot;login&quot;:&#10;            if let args = call.arguments as? [String: Any],&#10;               let permissions = args[&quot;permissions&quot;] as? [String] {&#10;                login(permissions: permissions, result: result)&#10;            } else {&#10;                result(FlutterError(code: &quot;INVALID_ARGUMENTS&quot;, message: &quot;Invalid arguments for login&quot;, details: nil))&#10;            }&#10;        // ... other cases ...&#10;        }&#10;    }&#10;&#10;    private func login(permissions: [String], result: @escaping FlutterResult) {&#10;        // Implement login logic here&#10;    }&#10;}&#10;```&#10;&#10;These changes will allow you to set the app ID programmatically when calling the login method from your Flutter code, while maintaining the existing structure of your SwiftFlutterFacebookAuthPlugin." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="Here is my FacebookAuth file for context, please give me what I should change according to your suggestions, be detailed, inform me of any mistakes I have made @.../ios/Classes/FacebookAuth.swift " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="Thank you for providing the FacebookAuth.swift file. Based on the context and your requirements, here are the detailed changes you should make to implement the programmatic app ID setting:&#10;&#10;1. In the `handle` method, modify the &quot;login&quot; case to accept and use the appId parameter:&#10;&#10;```swift&#10;case &quot;login&quot;:&#10;    let permissions = args?[&quot;permissions&quot;] as! [String]&#10;    let tracking = args?[&quot;tracking&quot;] as! String&#10;    let customNonce = args?[&quot;nonce&quot;] as? String&#10;    let appId = args?[&quot;appId&quot;] as? String&#10;&#10;    login(&#10;        permissions: permissions,&#10;        flutterResult: result,&#10;        tracking: tracking == &quot;limited&quot; ? .limited : .enabled,&#10;        nonce: customNonce,&#10;        appId: appId&#10;    )&#10;```&#10;&#10;2. Update the `login` method signature to include the appId parameter:&#10;&#10;```swift&#10;private func login(&#10;    permissions: [String],&#10;    flutterResult: @escaping FlutterResult,&#10;    tracking: LoginTracking,&#10;    nonce: String?,&#10;    appId: String?&#10;) {&#10;    if let appId = appId {&#10;        setAppId(appId)&#10;    }&#10;&#10;    // ... rest of the login method ...&#10;}&#10;```&#10;&#10;3. Add a new method to set the app ID:&#10;&#10;```swift&#10;private func setAppId(_ appId: String) {&#10;    Settings.shared.appID = appId&#10;}&#10;```&#10;&#10;These changes will allow you to set the app ID programmatically when calling the login method from your Flutter code. The iOS implementation will use the provided appId for the Facebook SDK initialization before proceeding with the login process.&#10;&#10;You've done a good job structuring your FacebookAuth class. The changes suggested here build upon your existing implementation to add the new functionality you need." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="I think I also need a way of resetting the appid similar to the java android java implementation @.../meedu/flutter_facebook_auth/FacebookAuth.java " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="You're absolutely right. Adding a method to reset the app ID is a great idea and will provide consistency with the Android implementation. Here's how you can implement this in your iOS FacebookAuth class:&#10;&#10;1. Add a new method to reset the app ID:&#10;&#10;```swift&#10;private func resetApplicationId() {&#10;    if let bundleId = Bundle.main.bundleIdentifier,&#10;       let appId = Bundle.main.object(forInfoDictionaryKey: &quot;FacebookAppID&quot;) as? String {&#10;        if appId.lowercased().hasPrefix(&quot;fb&quot;) {&#10;            Settings.shared.appID = String(appId.dropFirst(2))&#10;        } else {&#10;            Settings.shared.appID = appId&#10;        }&#10;    }&#10;}&#10;```&#10;&#10;2. Modify the `login` method to use this reset function:&#10;&#10;```swift&#10;private func login(&#10;    permissions: [String],&#10;    flutterResult: @escaping FlutterResult,&#10;    tracking: LoginTracking,&#10;    nonce: String?,&#10;    appId: String?&#10;) {&#10;    if let appId = appId {&#10;        setAppId(appId)&#10;    }&#10;&#10;    // ... existing login code ...&#10;&#10;    // Add this at the end of the method&#10;    if appId != nil {&#10;        resetApplicationId()&#10;    }&#10;}&#10;```&#10;&#10;This implementation mirrors the Android version by resetting the app ID to the one specified in the Info.plist file after the login process is complete. It's an excellent addition to ensure the SDK returns to its default state after custom app ID usage." />
+                    </message>
+                    <message>
+                      <speaker value="HUMAN" />
+                      <text value="What does setAppId() do and what does it call in @.../ios/Classes/SwiftFlutterFacebookAuthPlugin.swift " />
+                    </message>
+                    <message>
+                      <speaker value="ASSISTANT" />
+                      <text value="The `setAppId()` method in the SwiftFlutterFacebookAuthPlugin.swift file is responsible for setting the Facebook application ID programmatically. It calls the `setAppId()` method of the `facebookAuth` instance, which is an object of the FacebookAuth class. This method allows the app to dynamically change the Facebook app ID being used for authentication, enabling the use of different Facebook apps for various purposes within the same Flutter application." />
+                    </message>
+                  </list>
+                </messages>
+                <updatedAt value="2024-11-26T14:38:51.661377" />
+              </chat>
+            </list>
+          </chats>
+          <defaultLlm>
+            <llm>
+              <model value="anthropic/claude-3-5-sonnet-20240620" />
+              <provider value="Anthropic" />
+              <tags>
+                <list>
+                  <option value="gateway" />
+                  <option value="accuracy" />
+                  <option value="recommended" />
+                  <option value="free" />
+                </list>
+              </tags>
+              <title value="Claude 3.5 Sonnet" />
+              <usage>
+                <list>
+                  <option value="chat" />
+                  <option value="edit" />
+                </list>
+              </usage>
+            </llm>
+          </defaultLlm>
+        </AccountData>
+      </list>
+    </accountData>
+  </component>
+</project>

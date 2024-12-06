@@ -17,6 +17,7 @@ enum LoginTracking { limited, enabled }
 /// [FacebookAuthPlatform] methods.
 abstract class FacebookAuthPlatform extends PlatformInterface {
   static final _token = Object();
+
   FacebookAuthPlatform() : super(token: _token);
 
   static FacebookAuthPlatform _instance = FacebookAuthPlatformImplementation();
@@ -52,10 +53,13 @@ abstract class FacebookAuthPlatform extends PlatformInterface {
   ///
   /// [loginBehavior] (only Android) use this param to set the UI for the authentication,
   /// like webview, native app, or a dialog.
+  ///
+  /// [appId] the application id for the facebook application
   Future<LoginResult> login({
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.dialogOnly,
     LoginTracking loginTracking = LoginTracking.enabled,
+    String? appId,
     String? nonce,
   });
 

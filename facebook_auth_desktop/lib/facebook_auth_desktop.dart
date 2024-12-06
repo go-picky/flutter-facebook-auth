@@ -100,6 +100,7 @@ class FacebookAuthDesktopPlugin extends FacebookAuthPlatform {
     List<String> permissions = const ['email', 'public_profile'],
     LoginBehavior loginBehavior = LoginBehavior.dialogOnly,
     LoginTracking loginTracking = LoginTracking.enabled,
+    String? appId,
     String? nonce,
   }) async {
     assert(
@@ -117,7 +118,7 @@ class FacebookAuthDesktopPlugin extends FacebookAuthPlatform {
       host: signInURL.host,
       path: signInURL.path,
       queryParameters: {
-        'client_id': _appId,
+        'client_id': appId ?? _appId,
         'redirect_uri': redirectURL,
         'response_type': 'token,granted_scopes',
         'scope': permissions.join(','),
